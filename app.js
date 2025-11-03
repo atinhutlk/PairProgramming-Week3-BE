@@ -7,7 +7,7 @@ const {
   createFeedback,
   updateFeedback,
   deleteFeedback,
-} = require("./feedbackHandlers"); 
+} = require("./feedbackHandlers");
 
 // Middleware to parse JSON
 app.use(express.json());
