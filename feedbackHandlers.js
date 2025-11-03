@@ -2,7 +2,7 @@ const Feedback = require("./feedbackLib");
 
 const getAllFeedbacks = (req, res) => {
     const allFeedback = Feedback.getAll();
-    res.json({ allFeedback });
+    res.json( allFeedback );
 };
 
 const createFeedback = (req, res) => {
@@ -17,7 +17,7 @@ const createFeedback = (req, res) => {
 
 const getFeedbackById = (req, res) => {
     const id = req.params.feedbackId;
-    const findFeedback = Feedback.findById(id);
+    const findFeedback = Feedback.findbyId(id);
     if (findFeedback) {
     res.json(findFeedback);
     } else {
@@ -29,7 +29,7 @@ const getFeedbackById = (req, res) => {
 const updateFeedback = (req, res) => {
     const id = req.params.feedbackId;
     const updatedData = req.body;
-    const updatedFeedback = Feedback.updateOneById(id, updatedData);
+    const updatedFeedback = Feedback.updateOnebyId(id, updatedData);
     if (updatedFeedback) {
         res.json({ message: "Feedback updated successfully", updatedFeedback });
     } else {
@@ -39,9 +39,9 @@ const updateFeedback = (req, res) => {
 
 const deleteFeedback = (req, res) => {
     const id = req.params.feedbackId;
-    const deletedFeedback = Feedback.deleteOneById(id);
+    const deletedFeedback = Feedback.deleteOnebyId(id);
     if (deletedFeedback) {
-        res.json({ message: "Feedback deleted successfully", deletedFeedback });
+        res.json({ message: "Feedback deleted successfully"});
     } else {
         res.status(404).json({ error: "Feedback not found" });
     }
