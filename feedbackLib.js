@@ -62,9 +62,9 @@ if (require.main === module) {
 const feedback = {
     getAll,
     addOne,
-    findById,
-    updateOneById,
-    deleteOneById
+    findbyId,
+    updateOnebyId,
+    deleteOnebyId
 };
 
 module.exports = feedback;
