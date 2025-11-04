@@ -1,11 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "express": "^5.1.0"
-  },
-  "scripts": {
-    "start": "node app.js"
-=======
   "name": "tour-api",
   "version": "1.0.0",
   "description": "",
@@ -22,6 +15,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
->>>>>>> fe17221 (Complete Week 3 pair prgram Part2)
   }
 }
